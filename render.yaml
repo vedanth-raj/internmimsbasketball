@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: inter-nmims-basketball-2025
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build -l 10000
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: REACT_APP_MAPBOX_TOKEN
+        sync: false # Set this in Render dashboard
+    buildFilter:
+      paths:
+        - src/**/*
+        - public/**/*
+        - package.json
+        - package-lock.json
+    autoDeploy: false

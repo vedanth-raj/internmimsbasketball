@@ -1,10 +1,9 @@
 services:
   - type: web
     name: inter-nmims-basketball-2025
-    runtime: node
-    rootDir: ./
+    runtime: static
     buildCommand: npm install && npm run build
-    startCommand: npx serve -s build -l 10000
+    staticPublishPath: build
     envVars:
       - key: NODE_ENV
         value: production

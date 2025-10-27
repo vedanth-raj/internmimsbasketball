@@ -9,10 +9,4 @@ services:
         value: production
       - key: REACT_APP_MAPBOX_TOKEN
         sync: false # Set this in Render dashboard
-    buildFilter:
-      paths:
-        - src/**/*
-        - public/**/*
-        - package.json
-        - package-lock.json
     autoDeploy: false
